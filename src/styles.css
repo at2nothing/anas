@@ -11,7 +11,8 @@ body {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
-  width: 100%;
+  width: 100%;  color: #000000; /* Dark white color */
+
 }
 
 div#main {
@@ -51,6 +52,8 @@ h1 {
   font-weight: 400;
   line-height: 0.8;
   margin: 0;
+  color: #f2f2f2; /* Dark white color */
+
 }
 
 h2 {
@@ -90,7 +93,7 @@ li {
 }
 
 li::marker {
-  color: #4e567e;
+  color: #9e750e;
 }
 
 a {
@@ -99,7 +102,7 @@ a {
 }
 
 a:hover {
-  color: #4e567e;
+  color: #9e750e;
 }
 
 .container {
@@ -111,7 +114,7 @@ a:hover {
 
 .container .box {
   border-radius: 10px;
-  border: 1px solid rgb(204, 204, 204);
+  border: 1px solid #9e750e;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

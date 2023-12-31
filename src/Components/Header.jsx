@@ -1,12 +1,31 @@
-/**
- * Header component
- *
- * Top navigation bar for your site. Set to remain visible as the
- * user scrolls so that they can constantly reach any part of your page.
- */
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 0;
+      setIsScrolled(scrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleSmoothScroll = (event, targetId) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div
       style={{
@@ -19,12 +38,22 @@ const Header = () => {
         top: 0,
         width: "100%",
         zIndex: 10,
+        transition: "transform 0.3s ease", // Add a smooth transition effect
+        transform: isScrolled ? "translateX(-100%)" : "translateX(0)",
       }}
     >
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#footer">Contact</a>
+      <a href="#home" onClick={(e) => handleSmoothScroll(e, "home")}>
+        Home
+      </a>
+      <a href="#about" onClick={(e) => handleSmoothScroll(e, "about")}>
+        About
+      </a>
+      <a href="#portfolio" onClick={(e) => handleSmoothScroll(e, "portfolio")}>
+        Portfolio
+      </a>
+      <a href="#footer" onClick={(e) => handleSmoothScroll(e, "footer")}>
+        Contact
+      </a>
     </div>
   );
 };

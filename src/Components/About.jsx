@@ -18,25 +18,25 @@ import React from "react";
  */
 import image from "../images/motion-background.jpg";
 
-const imageAltText = "purple and blue abstract background";
+const imageAltText = "background";
 
 /**
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "Future-Building Software Engineering Student, Innovation Through Collaboration";
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
+  "Cloud computing",
+  "Artificial intelligence",
+  "C++",
+  "React",
+  "Raspberry Pi",
+  "Robotics",
 ];
 
 /**
@@ -45,7 +45,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
+  "As you explore my online portfolio, you'll notice my insatiable curiosity and passion for exploring the frontiers of technology. I am a highly motivated learner and innovator with a diverse skillset that includes expertise in utilizing AI to tackle real-world problems across a variety of domains, developing scalable solutions through deep knowledge of cloud platforms, crafting efficient and robust software applications using Python, C++, and Raspberry Pi, and creating innovative robotic solutions that demonstrate my technical prowess.\n\nWhile I am dedicated to individual projects, my ultimate goal is to harness the transformative power of artificial intelligence in collaboration with like-minded individuals and organizations. As an entrepreneur, I strive to contribute to groundbreaking solutions that positively impact the world. I value diversity and teamwork and welcome new ideas, feedback, and collaborative opportunities.\n\nIf you share my vision of leveraging technology for a better future, I encourage you to connect with me. Together, let's embark on an innovative journey.";
 
 const About = () => {
   return (
